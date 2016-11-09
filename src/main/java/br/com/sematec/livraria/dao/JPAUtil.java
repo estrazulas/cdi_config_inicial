@@ -2,15 +2,13 @@ package br.com.sematec.livraria.dao;
 
 import java.io.Serializable;
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;
+import javax.enterprise.inject.Disposes;
 import javax.enterprise.inject.Produces;
-import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-@ApplicationScoped
 public class JPAUtil implements Serializable {
 	/**
 	 * 
@@ -23,9 +21,10 @@ public class JPAUtil implements Serializable {
 	
 	private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("livraria");
 
-	public void close(EntityManager em) {
+	public void close(@Disposes EntityManager em) {
 		em.close();
 	}
+
 
 	@Produces
 	@RequestScoped

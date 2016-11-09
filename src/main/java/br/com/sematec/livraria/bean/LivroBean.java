@@ -12,7 +12,6 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import br.com.sematec.livraria.dao.AutorDao;
-import br.com.sematec.livraria.dao.DAO;
 import br.com.sematec.livraria.modelo.Autor;
 import br.com.sematec.livraria.modelo.Livro;
 
