@@ -9,6 +9,7 @@ import javax.inject.Named;
 
 import br.com.sematec.livraria.dao.AutorDao;
 import br.com.sematec.livraria.modelo.Autor;
+import br.com.sematec.livraria.tx.Transacional;
 
 @Named
 @ViewScoped
@@ -40,6 +41,7 @@ public class AutorBean implements Serializable {
 		return autorId;
 	}
 
+	@Transacional
 	public String gravar() {
 		System.out.println("Gravando autor " + this.autor.getNome());
 		if (this.autor.getId() == null) {

@@ -26,20 +26,11 @@ public class DAO<T> implements Serializable{
 	}
 
 	public void adiciona(T t) {
-		// consegue a entity manager
-		// abre transacao
-		em.getTransaction().begin();
-		// persiste o objeto
 		em.persist(t);
-		// commita a transacao
-		em.getTransaction().commit();
-		// fecha a entity manager
 	}
 
 	public void atualiza(T t) {
-		em.getTransaction().begin();
 		em.merge(t);
-		em.getTransaction().commit();
 	}
 
 	public T buscaPorId(Integer id) {
@@ -67,8 +58,6 @@ public class DAO<T> implements Serializable{
 	}
 
 	public void remove(T t) {
-		em.getTransaction().begin();
 		em.remove(em.merge(t));
-		em.getTransaction().commit();
 	}
 }
