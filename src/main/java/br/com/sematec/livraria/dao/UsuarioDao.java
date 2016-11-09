@@ -10,7 +10,7 @@ import javax.persistence.TypedQuery;
 
 import br.com.sematec.livraria.modelo.Usuario;
 
-public class UsuarioDao extends DAO<Usuario>implements Serializable  {
+public class UsuarioDao extends DAO<Usuario> implements Serializable  {
 	
 	/**
 	 * 
