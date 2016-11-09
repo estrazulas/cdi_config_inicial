@@ -23,7 +23,7 @@ public class AutorDao implements Serializable {
 
 	@PostConstruct
 	void init() {
-		this.dao = new DAO<Autor>( Autor.class);
+		this.dao = new DAO<Autor>( Autor.class, em);
 	}
 
 	public Autor buscaPorId(Integer autorId) {
