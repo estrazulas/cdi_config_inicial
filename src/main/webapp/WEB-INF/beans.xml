@@ -1,6 +1,7 @@
 <beans>
    <interceptors>
       <class>br.com.sematec.livraria.tx.GerenciadorTransacao</class>
+      <class>br.com.sematec.livraria.tx.GerenciadorTemporizador</class>
    </interceptors>
 </beans>
 
